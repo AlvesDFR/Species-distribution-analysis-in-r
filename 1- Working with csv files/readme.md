@@ -4,20 +4,12 @@ Data manipulation skills are indeed crucial across various fields of research, i
 
 
 ## Contents
-- [Instaling R](#instaling-R)
 - [Working with .csv files](#working-with-csv)
     - .csv in Excel:
       - How many species?
       - Where do species occur?
     - .csv in R
 - [Contact](#contact)
-
-## Instaling R
-R download:
-https://cran.r-project.org/bin/windows/base/
-
-R Studio download:
-https://posit.co/download/rstudio-desktop/
 
 ## Comma-separated values .csv
 Occurences points of freshwater crabs downloaded from https://www.iucnredlist.org/resources/spatial-data-download  
@@ -99,18 +91,6 @@ min(sp$lat)
 
 ## writing new .csv file
 write.csv(sp, "Potamonautes_obesus.csv", row.names = F)
-```
-
-## Next meeting topic: working with shapefiles
-
-```
-# Installing R packages
-library(rgdal)
-
-# Reading and working with shapefiles
-world<-readOGR("world.shp")
-plot(world, col="grey")
-points(sp[,2:3], pch = 3, cex = 0.5, col="red")
 ```
 
 ## Contact
