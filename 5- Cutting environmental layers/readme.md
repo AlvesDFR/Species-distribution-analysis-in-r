@@ -30,7 +30,7 @@ names(regions)
 world<-read_sf(dsn="C:/PATH/mundo/ne_10m_admin_0_countries.shp")
 
 ##################################################################
-################## Cut environmental layers ######################
+############### Cutingt environmental layers #####################
 ##################################################################
 
 ## Combine all rasters in your given directory into a stack object
