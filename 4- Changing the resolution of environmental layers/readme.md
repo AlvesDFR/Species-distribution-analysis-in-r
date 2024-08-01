@@ -74,7 +74,7 @@ fn<-subset(cities, cities$NM_MUN=="Fernando de Noronha")
 fn
 
 # Define the new extent (bbox) of the plot
-new_bbox <- st_bbox(c(xmin = -32.8, ymin = -4, xmax = -32.2, ymax = -3.6), crs = st_crs(fn))
+new_bbox <- st_bbox(c(xmin = -32.6, ymin = -4, xmax = -32.2, ymax = -3.6), crs = st_crs(fn))
 
 # Crop the raster to the new extent
 temp_biooracle_crop <- crop(temp_biooracle, new_bbox)
