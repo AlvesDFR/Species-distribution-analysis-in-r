@@ -21,13 +21,12 @@ unique(occs_cleaned$RLM_CODE)
 ## Create a list of REALM codes (RLM_CODE) that we will use to cut environmental variables
 unique_RLM_CODE <- unique(occs_cleaned$RLM_CODE)
 
-
 ## open .shp files containing information to categorize occurrence records
 regions <- read_sf("C:/PATH/MEOW/meow_ecos.shp")
 names(regions)
 
 ## open .shp files to plot occurrence records
-world<-read_sf(dsn="C:/PATH/mundo/ne_10m_admin_0_countries.shp")
+world<-read_sf(dsn="C:/PATH/ne_10m_admin_0_countries.shp")
 
 ##################################################################
 ############### Cutingt environmental layers #####################
@@ -69,7 +68,6 @@ predictors_cropped <- mask(predictors,regions_subset)
 pdf("background_area.pdf")
 plot(st_geometry(world))
 plot(predictors_cropped[[8]], add=TRUE)
-plot(st_geometry(occs_cleaned), add=TRUE, cex=0.5, col="blue")
 dev.off()
 
 ## Create an empty folder called "predictors_cropped" in your directory
